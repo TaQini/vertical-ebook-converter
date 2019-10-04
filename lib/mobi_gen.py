@@ -12,15 +12,15 @@ def kindelGen(file_dir, output_file):
         print(file_dir,i,output_file)
         if 'OEBPS' in i:
             opf=i
-    cmd = 'kindlegen ' + opf + ' -o ' + output_file
+    cmd = 'kindlegen \'' + opf + '\' -o \'' + output_file + '\''
     print(cmd)
     os.system(cmd)
     for i in file_name(file_dir,'mobi'):
         print(file_dir,i,output_file)
         mobi=i
-    cp = 'cp ' + mobi + ' ' + file_dir + '.mobi'
+    cp = 'cp \'' + mobi + '\' \'' + file_dir + '\'.mobi'
     print(cp)
     os.system(cp)
-    rm = 'rm -r ' + file_dir
+    rm = 'rm -r \'' + file_dir + '\''
     print(rm)
     os.system(rm)

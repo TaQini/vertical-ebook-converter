@@ -32,6 +32,14 @@ then
 $ ./kindleConverter infile [outfile]
 ```
 
+## pic
+
+ - before
+![before](./screenshot_2019_10_05T01_25_27+0800.png)
+
+ - after
+![after](./screenshot_2019_10_05T01_26_22+0800.png)
+
 ## works
 ### modify content.opf
 ```html
