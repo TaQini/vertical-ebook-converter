@@ -45,16 +45,18 @@ def file_name(file_dir,file_type):
 
 def mobiConvert(file_dir = './'):
     for i in file_name(file_dir,'xhtml'):
-        # print(i)
+        print(i)
         alter(i,'“','「')
         alter(i,'”','」')
         alter(i,'‘','『')
         alter(i,'’','』')
     for i in file_name(file_dir,'opf'):
+        print(i)
         print('convert horizontal-lr to vertical-rl ...')
         alter(i,'horizontal-lr','vertical-rl')
         alter_line(i,'<dc:language>','<dc:language>zh-tw</dc:language>')
     for i in file_name(file_dir,'css'):
+        print(i)
         text = 'body{\n\tmargin: 5%;\n\ttext-align: justify;\n\t-webkit-writing-mode: vertical-rl;\n}\n'
         print('added css: ')
         print(text)
