@@ -43,6 +43,15 @@ def file_name(file_dir,file_type):
                 L.append(os.path.join(root, file))
     return L
 
+# todo mobi7 convert
+# def dir_name(file_dir,target_str):
+#     L=[]
+#     for root, dirs, files in os.walk(file_dir):
+#         for dir in dirs:
+#             if target_str in dir:
+#                 L.append(os.path.join(root, dir))
+#     return L
+
 def mobiConvert(file_dir = './'):
     for i in file_name(file_dir,'xhtml'):
         print(i)
@@ -55,6 +64,15 @@ def mobiConvert(file_dir = './'):
         print('convert horizontal-lr to vertical-rl ...')
         alter(i,'horizontal-lr','vertical-rl')
         alter_line(i,'<dc:language>','<dc:language>zh-tw</dc:language>')
+
+# todo mobi7
+#     if not file_name(file_dir,'css'):
+#         path = dir_name(file_dir,'Styles')
+#         if path:
+#             with io.open(path[0]+'/style0001.css',"w+",encoding="utf-8") as f:
+#                 f.write('\n')
+#         print(path)
+
     for i in file_name(file_dir,'css'):
         print(i)
         text = 'body{\n\tmargin: 5%;\n\ttext-align: justify;\n\t-webkit-writing-mode: vertical-rl;\n}\n'

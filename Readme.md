@@ -65,3 +65,7 @@ body {
 ### reference
 https://bookfere.com/post/204.html
 https://bookfere.com/post/92.html#kg
+
+## todo
+ - add vertical style to old mobi (mobi7)
+

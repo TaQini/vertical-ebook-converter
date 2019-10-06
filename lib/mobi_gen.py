@@ -10,11 +10,13 @@ def kindelGen(file_dir, output_file):
     mobi = ''
     for i in file_name(file_dir,'opf'):
         print(file_dir,i,output_file)
+        opf=i
         if 'OEBPS' in i:
-            opf=i
+            break
     cmd = 'kindlegen \'' + opf + '\' -o \'' + output_file + '\''
     print(cmd)
     os.system(cmd)
+    # todo mobi7
     for i in file_name(file_dir,'mobi'):
         print(file_dir,i,output_file)
         mobi=i
